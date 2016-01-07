@@ -12,6 +12,13 @@ html, body {
   width: 100%;
 }
 
+
+/* add padding for top things */
+#top {
+  padding-top: 55px;
+}
+
+
 /* vertical-centered text */
 .text-vcenter {
   display: table-cell;
