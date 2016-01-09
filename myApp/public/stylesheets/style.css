@@ -2,8 +2,15 @@
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
 }
 
+
+.navbar {
+  background-color: #082C7F;
+  color: #FFFFFF;
+}
 /* padded section */
 .pad-section {
   padding: 50px 0;
@@ -12,7 +19,28 @@ html, body {
   width: 100%;
 }
 
+/* Text  for offer page */
 
+.referrals {
+  font-size: 20px;
+  color: blue;  
+}
+
+.reward {
+  font-size: 20px;
+  color: green;
+}
+
+.parenthetical {
+  font-size: 10px;
+  text-align: right;
+}
+
+.socialproof {
+  font-size: 20px;
+  color: orange;
+  text-align: center;
+}
 /* add padding for top things */
 #top {
   padding-top: 70px;
