@@ -53,10 +53,13 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'advoclik.urls'
 
+WSGI_APPLICATION = 'advoclik.wsgi.application'
+
+TEMPLATE_DIRS = [os.path.join(os.path.dirname(BASE_DIR), 'templates/')]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -77,8 +80,14 @@ WSGI_APPLICATION = 'advoclik.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'advoclik',
+        'USER': 'tgg_user',
+        'PASSWORD': 'freak123',
+        'HOST': 'localhost',
+        'OPTIONS': {
+            "init_command": "SET foreign_key_checks = 0;",
+        },
     }
 }
 
@@ -118,5 +127,22 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
+ROOT_PATH = path.join(path.dirname(__file__), '../..')  # up one level from settings.py
+STATICFILES_DIRS = (
+    path.abspath(path.join(ROOT_PATH, 'static')), # static is on root level
+)
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+]
+
+# Email
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+DEFAULT_FROM_EMAIL = 'Whatever <vagrant@your.hostname.com>'
