@@ -13,6 +13,5 @@ from django.contrib.auth import logout
 from django.db.models import Q
 
 # Create your views here.
-def home(request):
-    context = {}
-    return render(request, 'home/home.html', context)
+def index(request):
+    return HttpResponse("Hello, world.")
