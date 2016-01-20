@@ -4,6 +4,9 @@ sudo apt-get update >> /dev/null
 sudo apt-get upgrade -y >> /dev/null
 
 sudo apt-get install -y apache2 libapache2-mod-wsgi git python-pip libxml2-dev libxslt1-dev lib32z1-dev >> /dev/null
+sudo apt-get install -y python python-pip python-dev build-essential libffi-dev libssl-dev
+
+sudo apt-get install git
 
 sudo pip install virtualenvwrapper
 echo -e "
@@ -22,7 +25,7 @@ sudo pip install django==1.9.1
 deactivate
 
 cd /etc/apache2
-echo "ServerName localhost" | sudo tee conf-available/fqdn.conf
+echo "ServerName advoclik" | sudo tee conf-available/fqdn.conf
 sudo a2enconf fqdn
 sudo bash -c "
   cat > sites-available/advoclik.conf << '_EOF'
@@ -49,7 +52,7 @@ sudo bash -c "
     # However, you must set it for any further virtual host explicitly.
     #ServerName www.example.com
 
-    ServerAdmin webmaster@localhost
+    ServerAdmin webmaster@advoclik
     DocumentRoot /var/www/advoclik/advoclik
 
     # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
@@ -77,7 +80,7 @@ sudo service apache2 restart
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password Fre@konomics1sGre@t'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Fre@konomics1sGre@t'
 sudo apt-get -y install mysql-server >> /dev/null
-sudo mysql -uroot -pFre@konomics1sGre@t -e "CREATE DATABASE IF NOT EXISTS advoclik; GRANT ALL PRIVILEGES ON *.* TO 'tgg_user'@'localhost' IDENTIFIED BY 'freak123';"
+sudo mysql -uroot -pFre@konomics1sGre@t -e "CREATE DATABASE IF NOT EXISTS advoclik; GRANT ALL PRIVILEGES ON *.* TO 'tgg_user'@'advoclik' IDENTIFIED BY 'freak123';"
 sudo apt-get install -y python-dev libmysqlclient-dev >> /dev/null
 sudo apt-get install -y libjpeg-dev libpng12-dev
 sudo apt-get install -y libtiff5-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk

@@ -1,0 +1,6 @@
+*.pyc
+.vagrant/
+*.idea/
+www-source/tgg_projects/projects/migrations/*
+www-source/tgg_projects/associates/migrations/*
+0001_initial.py
