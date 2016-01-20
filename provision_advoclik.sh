@@ -18,7 +18,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv advoclik
 setvirtualenvproject ~/.virtualenvs/advoclik /var/www/advoclik
 
-sudo pip install django==1.7.5
+sudo pip install django==1.9.1
 deactivate
 
 cd /etc/apache2
@@ -86,8 +86,6 @@ sudo pip install MySQL-python
 sudo pip install django-simple-history
 sudo pip install Pillow==3.0.0
 sudo pip install sorl-thumbnail
-sudo pip install python-docx
-sudo pip install docx
 deactivate
 
 sudo debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
@@ -139,15 +137,11 @@ reset_db () {
     fi
   done
 
-  python manage.py makemigrations projects
-  python manage.py migrate projects
-  python manage.py makemigrations associates
-  python manage.py migrate associates
   python manage.py makemigrations
   python manage.py migrate
 
   # Load the fixture into the database (not currently done). Will look something like
-  python manage.py loaddata base_data
+  # python manage.py loaddata base_data
 
   # Going back to initial directory
   cd $_c
