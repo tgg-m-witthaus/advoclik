@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+from os import path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -53,13 +54,10 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'advoclik.urls'
 
-WSGI_APPLICATION = 'advoclik.wsgi.application'
-
-TEMPLATE_DIRS = [os.path.join(os.path.dirname(BASE_DIR), 'templates/')]
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = ''
 STATIC_URL = '/static/'
-ROOT_PATH = path.join(path.dirname(__file__), '../..')  # up one level from settings.py
+ROOT_PATH = path.join(path.dirname(__file__), '../')  # up one level from settings.py
 STATICFILES_DIRS = (
     path.abspath(path.join(ROOT_PATH, 'static')), # static is on root level
 )
@@ -137,12 +135,3 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
-
-# Email
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 25
-EMAIL_HOST_USER = ''
-EMAIL_HOST_PASSWORD = ''
-EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = 'Whatever <vagrant@your.hostname.com>'
