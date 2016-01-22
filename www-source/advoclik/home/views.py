@@ -14,4 +14,5 @@ from django.db.models import Q
 
 # Create your views here.
 def index(request):
-    return HttpResponse("Hello, world.")
+    context = {}
+    return render(request, 'home/home.html', context)
