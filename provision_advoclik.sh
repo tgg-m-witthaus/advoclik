@@ -83,9 +83,9 @@ sudo apt-get install -y python-mysqldb
 sudo apt-get install -y python-dev libmysqlclient-dev
 pip install MySQL-python
 pip install django==1.9.1
-sudo pip install django-simple-history
-sudo pip install Pillow==3.0.0
-sudo pip install sorl-thumbnail
+pip install django-simple-history
+pip install Pillow==3.0.0
+pip install sorl-thumbnail
 deactivate
 
 sudo apt-get -y install mysql-server
