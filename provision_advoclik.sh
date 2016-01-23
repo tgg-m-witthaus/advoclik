@@ -1,12 +1,13 @@
 #!/bin/bash
 
-sudo apt-get update >> /dev/null
+sudo apt-get update -y  >> /dev/null
 sudo apt-get upgrade -y >> /dev/null
 
-sudo apt-get install -y apache2 libapache2-mod-wsgi git python-pip libxml2-dev libxslt1-dev lib32z1-dev >> /dev/null
-sudo apt-get install -y python python-pip python-dev build-essential libffi-dev libssl-dev
+sudo apt-get install -y apache2
+sudo apt-get install -y libapache2-mod-wsgi git python-pip libxml2-dev libxslt1-dev lib32z1-dev >> /dev/null
 
-sudo apt-get install git
+## Fix issue with SSL and python, see https://urllib3.readthedocs.org/en/latest/security.html#insecureplatformwarning
+sudo pip install ndg-httpsclient pyopenssl pyasn1
 
 sudo pip install virtualenvwrapper
 echo -e "
@@ -21,11 +22,8 @@ source /usr/local/bin/virtualenvwrapper.sh
 mkvirtualenv advoclik
 setvirtualenvproject ~/.virtualenvs/advoclik /var/www/advoclik
 
-sudo pip install django==1.9.1
-deactivate
-
 cd /etc/apache2
-echo "ServerName advoclik" | sudo tee conf-available/fqdn.conf
+echo "ServerName localhost" | sudo tee conf-available/fqdn.conf
 sudo a2enconf fqdn
 sudo bash -c "
   cat > sites-available/advoclik.conf << '_EOF'
@@ -52,7 +50,7 @@ sudo bash -c "
     # However, you must set it for any further virtual host explicitly.
     #ServerName www.example.com
 
-    ServerAdmin webmaster@advoclik
+    ServerAdmin webmaster@localhost
     DocumentRoot /var/www/advoclik/advoclik
 
     # Available loglevels: trace8, ..., trace1, debug, info, notice, warn,
@@ -79,17 +77,21 @@ sudo service apache2 restart
 
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password Fre@konomics1sGre@t'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password Fre@konomics1sGre@t'
-sudo apt-get -y install mysql-server >> /dev/null
-sudo mysql -uroot -pFre@konomics1sGre@t -e "CREATE DATABASE IF NOT EXISTS advoclik; GRANT ALL PRIVILEGES ON *.* TO 'tgg_user'@'advoclik' IDENTIFIED BY 'freak123';"
-sudo apt-get install -y python-dev libmysqlclient-dev >> /dev/null
-sudo apt-get install -y libjpeg-dev libpng12-dev
-sudo apt-get install -y libtiff5-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
+
 workon advoclik
-sudo pip install MySQL-python
+sudo apt-get install -y python-mysqldb
+sudo apt-get install -y python-dev libmysqlclient-dev
+pip install MySQL-python
+pip install django==1.9.1
 sudo pip install django-simple-history
 sudo pip install Pillow==3.0.0
 sudo pip install sorl-thumbnail
 deactivate
+
+sudo apt-get -y install mysql-server
+sudo mysql -uroot -pFre@konomics1sGre@t -e "CREATE DATABASE IF NOT EXISTS advoclik; GRANT ALL PRIVILEGES ON *.* TO 'tgg_user'@'localhost' IDENTIFIED BY 'freak123';"
+sudo apt-get install -y libjpeg-dev libpng12-dev
+sudo apt-get install -y libtiff5-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
 
 sudo debconf-set-selections <<< "postfix postfix/mailname string your.hostname.com"
 sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'No Configuration'"
@@ -144,7 +146,7 @@ reset_db () {
   python manage.py migrate
 
   # Load the fixture into the database (not currently done). Will look something like
-  # python manage.py loaddata base_data
+  python manage.py loaddata base_data
 
   # Going back to initial directory
   cd $_c
@@ -155,5 +157,6 @@ alias run_dev="manage runserver 0.0.0.0:8000"
 alias run_apache="sudo service apache2 restart"
 
 ' >> ~/.profile
+source ~/.profile
 
 exit
