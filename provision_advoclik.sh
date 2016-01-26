@@ -86,6 +86,7 @@ pip install django==1.9.1
 pip install django-simple-history
 pip install Pillow==3.0.0
 pip install sorl-thumbnail
+pip install python-social-auth
 deactivate
 
 sudo apt-get -y install mysql-server
