@@ -58,7 +58,7 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'advoclik.urls'
 
-TEMPLATE_DIRS = [os.path.join(os.path.dirname(BASE_DIR), 'templates/'), 'advoclik/advoclik/templates/']
+TEMPLATE_DIRS = [os.path.join(os.path.dirname(BASE_DIR), 'templates/'), '/var/www/advoclik/advoclik/templates/', 'var/www/advoclik/www-source/advoclik/templates']
 
 TEMPLATE_CONTEXT_PROCESSORS = (
     "django.contrib.auth.context_processors.auth",
