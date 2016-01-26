@@ -17,6 +17,7 @@ from .models import ReferralLink, ReferralClick, init_data, Campaign
 
 
 # Create your views here.
+@login_required
 def index(request):
     # Note: Images are handled really shittily
     campaigns = Campaign.objects.all()
@@ -24,7 +25,7 @@ def index(request):
     context = {'links': links, 'campaigns': campaigns}
     return render(request, 'home/home.html', context)
 
-
+@login_required
 def campaigns(request):
     # I wonder if this is doing two separate queries or if it is smart enough to not duplicate work. No idea
     campaign_list = Campaign.objects.annotate(num_clicks=Count('referralclick__ip_address'), num_unique_ip=Count('referralclick__ip_address', distinct=True))
@@ -32,12 +33,14 @@ def campaigns(request):
     context = {'campaigns': campaign_list}
     return render(request, 'home/campaigns.html', context)
 
+@login_required
 def campaign_summary(request, campaign_id):
 
     campaign = Campaign.objects.get(pk=campaign_id)
     clicks = ReferralClick.objects.filter(campaign=campaign)
     context = {'clicks': clicks, 'campaign': campaign}
     return render(request, 'home/campaign_click_summary.html', context)
+
 
 def referral_redirect(request, url_suffix):
     refer = get_object_or_404(ReferralLink, referral_suffix__exact=url_suffix)
