@@ -1,3 +1,36 @@
+{% extends 'base.html' %}
 {% load staticfiles %}
+{%  block content %}
+    <div class="row">
+        <div class="col-xs-6">
+            <h1>Campaigns you are eligible for:</h1>
+            {% for campaign in campaigns %}
+                <div class="row">
+                    <div class="col-xs-6">
+                        <ul>
+                            <li>Campaign Name: {{ campaign.campaign_name }}</li>
+                            <li>Click goal: {{ campaign.target_clicks }}</li>
+                            <li>Description: lorum ipsum.......</li>
+                        </ul>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="col-xs-6">
+            <h1> Your Compaigns</h1>
+            {% for refer_link in links %}
+                <div class="row">
+                    <ul>
+                        <li>{{ refer_link.user_id }}</li>
+                        <li>{{ refer_link.campaign_id }}</li>
+                        <li>Referral Link: <a
+                                href={% url 'advoclik:referral_link' refer_link.referral_suffix %}>{% url 'advoclik:referral_link' refer_link.referral_suffix %}</a>
+                        </li>
+                        <li>Redirect Link: <a href={{ refer_link.redirect_url }}>{{ refer_link.redirect_url }}</a></li>
 
-<h1> TEST </h1>
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

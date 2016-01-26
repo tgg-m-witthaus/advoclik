@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h1>Campaigns</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Campaign Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Clicks paid for</th>
+                <th>Number of Clicks</th>
+                <th>Number of unique IP</th>
+                <th>Clicks</th>
+            </tr>
+        </thead>
+    <tbody>
+        {% for campaign in campaigns %}
+            <tr>
+                <td>{{ campaign.vendor_id }}</td>
+                <td>{{ campaign.campaign_name }}</td>
+                <td>{{ campaign.start_date }}</td>
+                <td>{{ campaign.end_date }}</td>
+                <td>{{ campaign.target_clicks }}</td>
+                <td>{{ campaign.num_clicks }}</td>
+                <td>{{ campaign.num_unique_ip }}</td>
+                <td><a href="{% url 'advoclik:campaign_click_summary' campaign.id %}">More Details</a> </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}

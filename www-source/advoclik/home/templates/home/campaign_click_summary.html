@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h1>{{ campaign.campaign_name }} Campaign</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Referral Link</td>
+                <th>IP Address</th>
+                <th>User Agent</th>
+                <th>Origin</th>
+                <th>Clcik Date</th>
+            </tr>
+        </thead>
+    <tbody>
+        {% for click in clicks %}
+            <tr>
+                <td>{{ click.link }}</td>
+                <td>{{ click.ip_address }}</td>
+                <td>{{ click.user_agent }}</td>
+                <td>{{ click.origin }}</td>
+                <td>{{ click.pub_date }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}
