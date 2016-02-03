@@ -20,7 +20,7 @@ def home(request):
                              {'request': request,
                               'user': request.user})
 
-    return render(request, 'thirdauth/login.html', context_instance=context)
+    return render(request, 'landing/login.html', context_instance=context)
 
 
 def auth_logout(request):
