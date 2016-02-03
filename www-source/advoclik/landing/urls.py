@@ -6,6 +6,6 @@ from . import views
 urlpatterns = [
     url(r'^$', views.landing, name='landing'),
     url(r'^login', auth_views.login, {'template_name':'landing/login.html'}),
-    url(r'^logout', views.auth_logout, name='logout'),
+    url(r'^logout', auth_views.logout, name='logout'),
     url('^', include('django.contrib.auth.urls')),
 ]

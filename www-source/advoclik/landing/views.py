@@ -15,13 +15,6 @@ from django.db.models import Count
 from django.contrib.auth import logout as auth_logout
 
 
-def login(request):
-    context = RequestContext(request,
-                             {'request': request,
-                              'user': request.user})
-
-    return render(request, 'landing/login.html', context_instance=context)
-
 
 def landing(request):
     context = RequestContext(request,
@@ -29,7 +22,3 @@ def landing(request):
                               'user': request.user})
 
     return render(request, 'landing/landing.html', context_instance=context)
-
-
-def auth_logout(request):
-    return HttpResponseRedirect('/logout?next_page="/"')
