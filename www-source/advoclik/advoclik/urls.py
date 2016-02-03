@@ -3,6 +3,7 @@ from django.contrib import admin
 from django.views.generic import RedirectView
 
 urlpatterns = [
+    url(r'^home/', include('home.urls', namespace='advoclik')),
     url(r'^$', RedirectView.as_view(url='/landing/')),
     url(r'^auth/', include('thirdauth.urls', namespace='thirdauth')),
     url(r'^landing/', include('landing.urls', namespace='landing')),
