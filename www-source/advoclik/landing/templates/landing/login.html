@@ -1,24 +1,47 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title %}Login{% endblock title %}</title>
+    	<!-- Javascript -->
+		<script charset="utf8" src="{% static 'lib/js/jquery-2.2.0.min.js' %}"></script> <!-- Previously used 1.11.1 -->
+		<script src="{% static 'lib/js/bootstrap.min.js' %}"></script>
+
+    	<!-- CSS -->
+		<link rel="stylesheet" href="{% static 'lib/css/bootstrap.min.css' %}">
+
+		<!-- Advoclik CSS -->
+		<link rel="stylesheet" href="{% static 'overall/css/advoclik.css' %}">
+		<!-- CSS blocks for specific apps-->
+		{% block css %} {% endblock css %}
+	</head>
+
 {% block content %}
-<h1>Login</h1>
 <div class="login-container">
-  <form method="post" action='login'>
-    {% csrf_token %}
-      <h1 class="login-header">Welcome to Advoclik</h1>
-      {% if form.errors %}
-        <p class="password-error">Your username and password didn't match. Please try again.</p>
-      {% else %}
-        <p></p>
-      {% endif %}
-      <div class="form-group has-feedback login-button">
-          <i class="glyphicon glyphicon-user form-control-feedback"></i>
-          <input class="form-control autofocus" id="id_username" maxlength="254" name="username" type="text">
-      </div>
-      <div class="form-group has-feedback">
-        <i class="glyphicon glyphicon-lock form-control-feedback"></i>
-        <input class="form-control" id="id_password" name="password" type="password">
-      </div>
-    <button type="submit" class="btn-login btn btn-primary">Login</button>
-    <input type="hidden" name="next" value="{{ next }}">
-  </form>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <form method="post" action='login'>
+        {% csrf_token %}
+          <h1 class="login-header">Welcome to Advoclik</h1>
+          {% if form.errors %}
+            <p class="password-error">Your username and password didn't match. Please try again.</p>
+          {% else %}
+            <p></p>
+          {% endif %}
+          <div class="form-group has-feedback login-button">
+              <i class="glyphicon glyphicon-user form-control-feedback"></i>
+              <input class="form-control autofocus" id="id_username" maxlength="254" name="username" type="text">
+          </div>
+          <div class="form-group has-feedback">
+            <i class="glyphicon glyphicon-lock form-control-feedback"></i>
+            <input class="form-control" id="id_password" name="password" type="password">
+          </div>
+        <button type="submit" class="btn-login btn btn-primary">Login</button>
+        <input type="hidden" name="next" value="{{ next }}">
+      </form>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
 </div>
 {% endblock %}
