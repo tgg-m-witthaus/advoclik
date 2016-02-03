@@ -23,7 +23,7 @@ def landing(request):
 
     return render(request, 'landing/landing.html', context_instance=context)
 
-def register_page(request):
+def register(request):
     context = RequestContext(request,
                              {'request': request,
                               'user': request.user})

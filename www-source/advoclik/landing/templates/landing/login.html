@@ -16,11 +16,10 @@
 		{% block css %} {% endblock css %}
 	</head>
 
-{% block content %}
-<div class="login-container">
+<div class="container-fluid">
   <div class="row">
     <div class="col-md-4"></div>
-    <div class="col-md-4">
+    <div class="col-md-4 well well-lg">
       <form method="post" action='login'>
         {% csrf_token %}
           <h1 class="login-header">Welcome to Advoclik</h1>
@@ -44,4 +43,3 @@
     <div class="col-md-4"></div>
   </div>
 </div>
-{% endblock %}
