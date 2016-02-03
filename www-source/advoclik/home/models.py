@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.contrib.auth.models import User
-from datetime import datetime
+from datetime import datetime, timedelta
 from django.utils.encoding import python_2_unicode_compatible
 from django.contrib.staticfiles.templatetags.staticfiles import static
 # Create your models here.
@@ -12,7 +12,7 @@ class Vendor(models.Model):
     name = models.CharField(max_length=30)
     contact_email = models.EmailField()
     contact_phone = models.CharField(max_length=12)
-    date_created = models.DateTimeField(auto_now_add=True)
+    date_created = models.DateTimeField(default=datetime.now())
 
     def __str__(self):
         return self.name
@@ -21,9 +21,9 @@ class Vendor(models.Model):
 class Campaign(models.Model):
     vendor_id = models.ForeignKey('Vendor')
     campaign_name = models.CharField(max_length=30)
-    created_date = models.DateTimeField(auto_now_add=True)
-    start_date = models.DateTimeField()
-    end_date = models.DateTimeField()
+    created_date = models.DateTimeField(default=datetime.now())
+    start_date = models.DateTimeField(default=datetime.now())
+    end_date = models.DateTimeField(default=datetime.now()+timedelta(days=5))
     active = models.BooleanField(default=False)
     target_clicks = models.IntegerField()
 
@@ -86,8 +86,3 @@ def init_data():
                         redirect_url="http://www.tgggroup.com/")
 
     link.save()
-
-
-
-
-

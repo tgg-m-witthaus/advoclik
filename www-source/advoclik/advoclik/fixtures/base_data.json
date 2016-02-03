@@ -1,0 +1,83 @@
+[
+    {
+		"model": "auth.group",
+		"pk": 1,
+		"fields": {
+			"name": "User"
+		}
+	},
+    {
+		"model": "auth.group",
+		"pk": 2,
+		"fields": {
+			"name": "Brand"
+		}
+	},
+    {
+		"model": "auth.group",
+		"pk": 3,
+		"fields": {
+			"name": "Admin"
+		}
+	},
+  {
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "username": "c_cook",
+    "email": "cook@tgggroup.com",
+    "last_name": "Cook",
+    "first_name": "Cody",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "groups": [3],
+    "password": "pbkdf2_sha256$15000$PaVAtfLbrMUn$Tu9A061Lx1OPxC93Mmw6PIpsY9cU67qqmN8y+X1YGsA="
+  }
+},
+  {
+  "model": "auth.user",
+  "pk": 2,
+  "fields": {
+    "username": "p_kravik",
+    "email": "Kravik@tgggroup.com",
+    "last_name": "Kravik",
+    "first_name": "Paul",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "groups": [3],
+    "password": "pbkdf2_sha256$15000$PaVAtfLbrMUn$Tu9A061Lx1OPxC93Mmw6PIpsY9cU67qqmN8y+X1YGsA="
+  }
+},
+  {
+  "model": "home.Vendor",
+  "pk":1,
+  "fields": {
+    "name": "TGG",
+    "contact_email": "tgg@tgggroup.com",
+    "contact_phone":"3126216060"
+  }
+},
+  {
+  "model": "home.Campaign",
+  "pk": 1,
+  "fields": {
+    "vendor_id":1,
+    "campaign_name": "Testing",
+    "active": true,
+    "target_clicks": 1000
+    }
+},
+  {
+  "model": "home.ReferralLink",
+  "pk": 1,
+  "fields": {
+    "campaign_id":1,
+    "user_id":1,
+    "referral_url":"refer/test",
+    "referral_suffix":"test",
+    "redirect_url":"http://www.tgggroup.com/"
+    }
+}
+]

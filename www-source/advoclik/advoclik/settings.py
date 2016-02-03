@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    'landing',
     'advoclik',
     'thirdauth',
     'social.apps.django_app.default'
