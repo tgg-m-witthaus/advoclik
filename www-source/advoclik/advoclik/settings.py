@@ -83,7 +83,7 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend'
 )
 
-LOGIN_URL = '/auth/login/'
+LOGIN_URL = '/landing/login/'
 LOGIN_REDIRECT_URL = '/'
 
 SOCIAL_AUTH_FACEBOOK_KEY = "518130741701742"
