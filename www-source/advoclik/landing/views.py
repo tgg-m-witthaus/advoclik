@@ -29,3 +29,10 @@ def register(request):
                               'user': request.user})
 
     return render(request, 'landing/register.html', context_instance=context)
+
+def register_user(request):
+    context = RequestContext(request,
+                             {'request': request,
+                              'user': request.user})
+
+    return render(request, 'landing/register.html', context_instance=context)

@@ -22,25 +22,29 @@
   <div class="row">
     <div class="col-md-4"></div>
     <div class="col-md-4 well well-lg">
-    <form class="form-horizontal" action="{% url 'register_user' %}" method="POST">
+    <form class="form-horizontal" action='register_user' method="POST" autocomplete="off">
       <div id="legend">
         <legend class="">Register</legend>
       </div>
       <div class="control-group">
-        <!-- Username -->
-        <label class="control-label"  for="username">Username</label>
+        <!-- first name -->
+        <label class="control-label"  for="firstname">First name</label>
         <div class="controls">
-          <input class="form-control" id="username" name="username" placeholder="" class="input-xlarge">
-          <p class="help-block">Username can contain any letters or numbers, without spaces</p>
+          <input class="form-control" id="firstname" name="firstname" placeholder="">
         </div>
       </div>
-
+      <div class="control-group">
+        <!-- last name -->
+        <label class="control-label"  for="lastname">Last name</label>
+        <div class="controls">
+          <input class="form-control" id="lastname" name="lastname" placeholder="">
+        </div>
+      </div>
       <div class="control-group">
         <!-- E-mail -->
         <label class="control-label" for="email">E-mail</label>
         <div class="controls">
-          <input class="form-control" id="email" name="email" placeholder="" class="input-xlarge">
-          <p class="help-block">Please provide your E-mail</p>
+          <input class="form-control" id="email" name="email" placeholder="" autocomplete="off">
         </div>
       </div>
 
@@ -48,19 +52,9 @@
         <!-- Password-->
         <label class="control-label" for="password">Password</label>
         <div class="controls">
-          <input class="form-control" type="password" id="password" name="password" placeholder="" class="input-xlarge">
-          <p class="help-block">Password should be at least 4 characters</p>
+          <input class="form-control" type="password" id="password" name="password" placeholder="" autocomplete="off">
         </div>
-      </div>
-
-      <div class="control-group">
-        <!-- Password -->
-        <label class="control-label"  for="password_confirm">Password (Confirm)</label>
-        <div class="controls">
-          <input class="form-control" type="password" id="password_confirm" name="password_confirm" placeholder="" class="input-xlarge">
-          <p class="help-block">Please confirm password</p>
-        </div>
-      </div>
+      </div><br>
       <div class="control-group">
         <!-- Button -->
         <div class="controls">
