@@ -8,6 +8,7 @@ urlpatterns = [
     url(r'^login', auth_views.login, {'template_name':'landing/login.html'}),
     url(r'^logout', auth_views.logout, name='logout'),
     url(r'^register', views.register, name='register'),
+    url(r'^about', views.about, name='about'),
     url(r'^register_user', views.register_user, name='register_user'),
     url('^', include('django.contrib.auth.urls')),
 ]
