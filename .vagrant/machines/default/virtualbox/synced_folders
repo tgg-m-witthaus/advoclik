@@ -1,1 +1,0 @@
-{"virtualbox":{"/var/www/advoclik":{"guestpath":"/var/www/advoclik","hostpath":"C:/Users/m_witthaus/Desktop/advoclik/www-source","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/m_witthaus/Desktop/advoclik","disabled":false,"__vagrantfile":true}}}

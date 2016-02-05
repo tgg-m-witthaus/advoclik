@@ -121,6 +121,7 @@ echo -e '
 manage () {
   _c="$PWD"
   workon advoclik
+  cd advoclik
   python /var/www/advoclik/advoclik/manage.py "$@"
   cd $_c
 }
@@ -143,6 +144,10 @@ reset_db () {
     fi
   done
 
+  python manage.py makemigrations home
+  python manage.py migrate home
+  python manage.py makemigrations landing
+  python manage.py migrate landing
   python manage.py makemigrations
   python manage.py migrate
 
@@ -151,6 +156,8 @@ reset_db () {
 
   # Going back to initial directory
   cd $_c
+  # Restart the server
+  sudo service apache2 restart
 }
 export reset_db
 
