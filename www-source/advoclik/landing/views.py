@@ -47,9 +47,11 @@ def company(request):
 #      BRANDS     #
 # --------------- #
 def brands(request):
+    all_brands = brandContact.objects.all
     context = RequestContext(request,
                              {'request': request,
-                              'user': request.user})
+                              'user': request.user,
+                              'all_brands': all_brands})
 
     return render(request, 'landing/brands.html', context_instance=context)
 
@@ -65,7 +67,7 @@ def add_brand_contact(request):
     brand_contact, created = brandContact.objects.get_or_create(contact_name=contact_name,
                                                                 contact_email = contact_email,
                                                                 company=brand)
-
+    return HttpResponseRedirect(reverse('landing:brands'))
 
 
 # --------------------- #
