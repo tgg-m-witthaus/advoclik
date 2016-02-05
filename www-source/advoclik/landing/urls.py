@@ -9,6 +9,8 @@ urlpatterns = [
     url(r'^logout', auth_views.logout, name='logout'),
     url(r'^register', views.register, name='register'),
     url(r'^about', views.about, name='about'),
+    url(r'^company', views.company, name='company'),
+    url(r'^brands', views.brands, name='brands'),
     url(r'^register_user', views.register_user, name='register_user'),
     url('^', include('django.contrib.auth.urls')),
 ]
