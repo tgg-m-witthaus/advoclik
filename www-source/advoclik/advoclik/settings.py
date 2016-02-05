@@ -25,8 +25,6 @@ SECRET_KEY = 'g6^x9)lqs&#e)=4)9pk5&0cqsotg-))z7*g=-zkw4@6(@w8#t4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 THUMBNAIL_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
@@ -62,23 +60,34 @@ MIDDLEWARE_CLASSES = [
 
 ROOT_URLCONF = 'advoclik.urls'
 
-TEMPLATES = []
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
 
-TEMPLATE_DIRS = [os.path.join(os.path.dirname(BASE_DIR), 'templates/'), '/var/www/advoclik/advoclik/templates/', '/var/www/advoclik/www-source/advoclik/templates']
+        'DIRS': [
+            os.path.join(os.path.dirname(BASE_DIR), 'templates/'),
+             '/var/www/advoclik/advoclik/templates/',
+             '/var/www/advoclik/www-source/advoclik/templates'
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'debug': True,
+            'context_processors': [
+                "django.contrib.auth.context_processors.auth",
+                "django.core.context_processors.debug",
+                "django.core.context_processors.i18n",
+                "django.core.context_processors.media",
+                "django.core.context_processors.static",
+                "django.core.context_processors.tz",
+                "django.contrib.messages.context_processors.messages",
+                "django.core.context_processors.request",
+                "social.apps.django_app.context_processors.backends",
+                "social.apps.django_app.context_processors.login_redirect"
+            ]
+        }
+    }
+]
 
-TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.core.context_processors.tz",
-    "django.contrib.messages.context_processors.messages",
-    "django.core.context_processors.request",
-    "social.apps.django_app.context_processors.backends",
-    "social.apps.django_app.context_processors.login_redirect"
-
-)
 
 AUTHENTICATION_BACKENDS = (
     'social.backends.facebook.FacebookOAuth2',
