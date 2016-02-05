@@ -4,6 +4,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from datetime import datetime, timedelta
 from django.utils.encoding import python_2_unicode_compatible
+from django.utils import timezone
 from django.contrib.staticfiles.templatetags.staticfiles import static
 # Create your models here.
 
@@ -12,7 +13,7 @@ class Vendor(models.Model):
     name = models.CharField(max_length=30)
     contact_email = models.EmailField()
     contact_phone = models.CharField(max_length=12)
-    date_created = models.DateTimeField(default=datetime.now())
+    date_created = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
         return self.name
@@ -21,9 +22,9 @@ class Vendor(models.Model):
 class Campaign(models.Model):
     vendor_id = models.ForeignKey('Vendor')
     campaign_name = models.CharField(max_length=30)
-    created_date = models.DateTimeField(default=datetime.now())
-    start_date = models.DateTimeField(default=datetime.now())
-    end_date = models.DateTimeField(default=datetime.now()+timedelta(days=5))
+    created_date = models.DateTimeField(default=timezone.now)
+    start_date = models.DateTimeField(default=timezone.now)
+    end_date = models.DateTimeField(null=True)
     active = models.BooleanField(default=False)
     target_clicks = models.IntegerField()
 

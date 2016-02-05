@@ -29,7 +29,7 @@
     "last_name": "Cook",
     "first_name": "Cody",
     "is_active": true,
-    "is_superuser": false,
+    "is_superuser": true,
     "is_staff": true,
     "groups": [3],
     "password": "pbkdf2_sha256$15000$PaVAtfLbrMUn$Tu9A061Lx1OPxC93Mmw6PIpsY9cU67qqmN8y+X1YGsA="
@@ -44,7 +44,7 @@
     "last_name": "Kravik",
     "first_name": "Paul",
     "is_active": true,
-    "is_superuser": false,
+    "is_superuser": true,
     "is_staff": true,
     "groups": [3],
     "password": "pbkdf2_sha256$15000$PaVAtfLbrMUn$Tu9A061Lx1OPxC93Mmw6PIpsY9cU67qqmN8y+X1YGsA="
