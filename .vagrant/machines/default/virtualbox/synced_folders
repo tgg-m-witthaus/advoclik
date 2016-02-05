@@ -1,1 +1,1 @@
-{"virtualbox":{"/var/www/advoclik":{"guestpath":"/var/www/advoclik","hostpath":"C:/Users/c_cook/VMs/advoclik/www-source","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/c_cook/VMs/advoclik","disabled":false}}}
+{"virtualbox":{"/var/www/advoclik":{"guestpath":"/var/www/advoclik","hostpath":"C:/Users/m_witthaus/Desktop/advoclik/www-source","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/m_witthaus/Desktop/advoclik","disabled":false,"__vagrantfile":true}}}
