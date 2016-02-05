@@ -12,5 +12,6 @@ urlpatterns = [
     url(r'^company', views.company, name='company'),
     url(r'^brands', views.brands, name='brands'),
     url(r'^register_user', views.register_user, name='register_user'),
+    url(r'^add_brand_contact', views.add_brand_contact, name='add_brand_contact'),
     url('^', include('django.contrib.auth.urls')),
 ]

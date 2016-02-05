@@ -13,7 +13,7 @@ from django.contrib.auth import logout
 from django.db.models import Q
 from django.db.models import Count
 from django.contrib.auth import logout as auth_logout
-
+from .models import brandContact
 
 
 
@@ -52,6 +52,20 @@ def brands(request):
                               'user': request.user})
 
     return render(request, 'landing/brands.html', context_instance=context)
+
+def add_brand_contact(request):
+    POST = request.POST
+
+    # Pull values from the POST
+    contact_name = POST['contact_name']
+    contact_email = POST['contact_email']
+    brand = POST['company']
+
+    # Add brand contact to the db if not there
+    brand_contact, created = brandContact.objects.get_or_create(contact_name=contact_name,
+                                                                contact_email = contact_email,
+                                                                company=brand)
+
 
 
 # --------------------- #
