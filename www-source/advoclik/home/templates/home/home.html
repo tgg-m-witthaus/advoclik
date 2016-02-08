@@ -1,36 +1,115 @@
-{% extends 'base.html' %}
-{% load staticfiles %}
+{% extends 'base_home.html' %}  
 {%  block content %}
-    <div class="row">
-        <div class="col-xs-6">
-            <h1>Campaigns you are eligible for:</h1>
-            {% for campaign in campaigns %}
-                <div class="row">
-                    <div class="col-xs-6">
-                        <ul>
-                            <li>Campaign Name: {{ campaign.campaign_name }}</li>
-                            <li>Click goal: {{ campaign.target_clicks }}</li>
-                            <li>Description: lorum ipsum.......</li>
-                        </ul>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="col-xs-6">
-            <h1> Your Compaigns</h1>
-            {% for refer_link in links %}
-                <div class="row">
-                    <ul>
-                        <li>{{ refer_link.user_id }}</li>
-                        <li>{{ refer_link.campaign_id }}</li>
-                        <li>Referral Link: <a
-                                href={% url 'advoclik:referral_link' refer_link.referral_suffix %}>{% url 'advoclik:referral_link' refer_link.referral_suffix %}</a>
-                        </li>
-                        <li>Redirect Link: <a href={{ refer_link.redirect_url }}>{{ refer_link.redirect_url }}</a></li>
 
-                    </ul>
-                </div>
-            {% endfor %}
-        </div>
-    </div>
+               
+        <section class="featured-blog-posts section">       
+       
+            <div class="flexslider blog-slider">
+                <ul class="slides">
+                    <li class="slide slide-1">
+                        <div class="flex-caption container">
+                            <h3 class="title"><a href="#">Campaign 1</a></h3>
+                            <div class="meta">$2</div>
+                            <a class="more-link" href="blog-single.html">Share now &rarr;</a>
+                        </div><!--//flex-caption-->
+                    </li>
+                    <li class="slide slide-2">
+                        <div class="flex-caption container">
+                            <h3 class="title"><a href="#">Campaign 2</a></h3>
+                            <div class="meta">$3</div>
+                            <a class="more-link" href="blog-single.html">Share now &rarr;</a>
+                        </div><!--//flex-caption-->
+                    </li>
+                    <li class="slide slide-3">
+                        <div class="flex-caption container">
+                            <h3 class="title"><a href="#">Campaign 3</a></h3>
+                            <div class="meta">$7</div>
+                            <a class="more-link" href="blog-single.html">Share now &rarr;</a>
+                        </div><!--//flex-caption-->
+                </ul><!--//slides-->
+            </div><!--//flexslider-->
+                    
+        </section><!--//featured-blog-posts-->
+        
+        <!-- ******BLOG LIST****** --> 
+        <div class="blog container">
+            <div class="row">
+                <div id="blog-mansonry" class="blog-list">
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <a href="blog-single.html"><img class="img-responsive" src="../static/overall/images/blog/post-1-thumb.jpg" alt="" /></a>                                
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title"><a href="blog-single.html">Campaign 1</a></h3>
+                                <div class="post-entry">
+                                    <p>This is a placeholder</p>
+                                    <a class="read-more" href="blog-single.html">Learn more<i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                                <div class="meta">
+                                    <ul class="meta-list list-inline">                                       
+                                    	<li class="post-time post_date date updated">$2</li>                              	
+                                	</ul><!--//meta-list-->                           	
+                                </div><!--meta-->
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <a href="blog-single.html"><img class="img-responsive" src="../static/overall/images/blog/post-1-thumb.jpg" alt="" /></a>                                
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title"><a href="blog-single.html">Campaign 2</a></h3>
+                                <div class="post-entry">
+                                    <p>This is a placeholder</p>
+                                    <a class="read-more" href="blog-single.html">Learn more<i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                                <div class="meta">
+                                    <ul class="meta-list list-inline">                                       
+                                    	<li class="post-time post_date date updated">$3</li>                              	
+                                	</ul><!--//meta-list-->                           	
+                                </div><!--meta-->
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                    
+                    <article class="post col-md-4 col-sm-6 col-xs-12">
+                        <div class="post-inner">
+                            <figure class="post-thumb">
+                                <a href="blog-single.html"><img class="img-responsive" src="../static/overall/images/blog/post-1-thumb.jpg" alt="" /></a>                                
+                            </figure><!--//post-thumb-->
+                            <div class="content">
+                                <h3 class="post-title"><a href="blog-single.html">Campaign 3</a></h3>
+                                <div class="post-entry">
+                                    <p>This is a placeholder</p>
+                                    <a class="read-more" href="blog-single.html">Learn more<i class="fa fa-long-arrow-right"></i></a>
+                                </div>
+                                <div class="meta">
+                                    <ul class="meta-list list-inline">                                       
+                                    	<li class="post-time post_date date updated">$7</li>                              	
+                                	</ul><!--//meta-list-->                           	
+                                </div><!--meta-->
+                            </div><!--//content-->
+                        </div><!--//post-inner-->
+                    </article><!--//post-->
+                </div><!--//blog-list-->  
+            </div><!--//row-->
+            <div class="pagination-container text-center">
+                <ul class="pagination">
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <li class="active"><a href="#">1<span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul><!--//pagination-->
+            </div><!--//pagination-container-->
+        </div><!--//blog-->        
+    </div><!--//wrapper-->
+  
+</div>
 {% endblock %}
+
