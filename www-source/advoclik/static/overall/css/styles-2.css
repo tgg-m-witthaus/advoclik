@@ -458,6 +458,11 @@ select {
 .headline-bg.contact-headline-bg {
   background-image: url('../images/background/bg-header-small-3.jpg');
 }
+
+.headline-bg.brand-headline-bg {
+  background-image: url('../images/background/bg-header-small-2.jpg');
+}
+
 .headline-bg.about-headline-bg {
   background-image: url('../images/background/bg-header-small-4.jpg');
 }
