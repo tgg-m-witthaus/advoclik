@@ -26,6 +26,114 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head> 
+<body>
+
+<div class="blog-page">
+    <div class="wrapper">
+ <!-- ******HEADER****** --> 
+        <header class="header header-blog">  
+            <div class="container">       
+                <h1 class="logo">
+                    <a href="blog.html">Advoclik <span class="sub">Campaigns</span></a>
+                </h1><!--//logo-->
+                <nav class="main-nav navbar-right" role="navigation">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button><!--//nav-toggle-->
+                    </div><!--//navbar-header-->
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">My Campaigns <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="blog-category.html">Eligible</a></li>
+                                    <li><a href="blog-category.html">Current</a></li>
+                                    <li><a href="blog-category.html">Past</a></li>            
+                                </ul>                            
+                            </li><!--//dropdown-->
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">My Account <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="blog-archive.html">Profile</a></li>
+                                    <li><a href="blog-archive.html">Payment</a></li>              
+                                </ul>                            
+                            </li><!--//dropdown-->
+                            <li class="nav-item nav-item-main-site last"><a href="../landing"><i class="fa fa-home"></i> Back to landing</a></li>
+                        </ul><!--//nav-->
+                    </div><!--//navabr-collapse-->
+                </nav><!--//main-nav-->         
+            </div><!--//container-->
+        </header><!--//header-->         
 
         {% block content %}
     	{% endblock %}
+
+  
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">                    
+                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">About us</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="about"><i class="fa fa-caret-right"></i>Who we are</a></li>
+                                <li><a href="company"><i class="fa fa-caret-right"></i>Contact Us</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->      
+                    <div class="footer-col connect col-md-6 col-sm-12 col-xs-12">
+                        <div class="footer-col-inner">
+                            <ul class="social list-inline">
+                                <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>                
+                            </ul>
+                            <div class="form-container">
+                                <p class="intro">Stay up to date with the latest news and offers from Advoclik</p>
+                                <form class="signup-form navbar-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Enter your email address">
+                                    </div>   
+                                    <button type="submit" class="btn btn-cta btn-cta-primary">Subscribe Now</button>                                 
+                                </form>                               
+                            </div><!--//subscription-form-->
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->
+                    <div class="clearfix"></div> 
+                </div><!--//row-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <small class="copyright">Copyright 2016 Advoclik</small>                
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+
+
+    <!-- Javascript -->          
+    <script type="text/javascript" src="../static/overall/plugins/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../static/overall/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../static/overall/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="../static/overall/plugins/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="../static/overall/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="../static/overall/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="../static/overall/plugins/FitVids/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="../static/overall/plugins/flexslider/jquery.flexslider-min.js"></script> 
+            
+    <!-- blog page specific js starts --> 
+    <script type="text/javascript" src="../static/overall/plugins/imagesloaded/imagesloaded.pkgd.min.js"></script>     
+    <script type="text/javascript" src="../static/overall/plugins/masonry.pkgd.min.js"></script> 
+    <script type="text/javascript" src="../static/overall/js/blog.js"></script>
+    <!-- blog page specific js ends -->   
+     
+    <script type="text/javascript" src="../static/overall/js/main.js"></script>
+    
+            
+</body>
+
+</html>
