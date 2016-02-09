@@ -7,8 +7,7 @@ from django.contrib.auth.models import (
 class MyUserManager(BaseUserManager):
     def create_user(self, email, password=None):
         """
-        Creates and saves a User with the given email, date of
-        birth and password.
+        Creates and saves a User
         """
         if not email:
             raise ValueError('Users must have an email address')
@@ -37,6 +36,16 @@ class MyUserManager(BaseUserManager):
 class MyUser(AbstractBaseUser):
     email = models.EmailField(
         verbose_name='email address',
+        max_length=255,
+        unique=True,
+    )
+    first_name = models.CharField(
+        verbose_name='first name',
+        max_length=255,
+        unique=True,
+    )
+    last_name = models.CharField(
+        verbose_name='last name',
         max_length=255,
         unique=True,
     )
