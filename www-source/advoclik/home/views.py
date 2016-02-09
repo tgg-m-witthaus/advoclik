@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime, date, timedelta
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import Group
 from django.core.mail import send_mail
 import os
 import json
@@ -12,8 +12,9 @@ from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib.auth import logout
 from django.db.models import Q
 from django.db.models import Count
+from advoclik.models import MyUser
 
-from .models import ReferralLink, ReferralClick, init_data, Campaign
+from .models import ReferralLink, ReferralClick, Campaign
 
 
 # Create your views here.
@@ -65,4 +66,3 @@ def get_client_ip(request):
     else:
         ip = request.META.get('REMOTE_ADDR')
     return ip
-

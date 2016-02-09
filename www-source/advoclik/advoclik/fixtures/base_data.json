@@ -21,10 +21,9 @@
 		}
 	},
   {
-  "model": "auth.user",
+  "model": "settings.AUTH_USER_MODEL",
   "pk": 1,
   "fields": {
-    "username": "c_cook",
     "email": "cook@tgggroup.com",
     "last_name": "Cook",
     "first_name": "Cody",
@@ -36,10 +35,9 @@
   }
 },
   {
-  "model": "auth.user",
+  "model": "settings.AUTH_USER_MODEL",
   "pk": 2,
   "fields": {
-    "username": "p_kravik",
     "email": "Kravik@tgggroup.com",
     "last_name": "Kravik",
     "first_name": "Paul",

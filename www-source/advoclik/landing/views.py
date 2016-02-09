@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime, date, timedelta
-from django.contrib.auth.models import User, Group
+from django.contrib.auth.models import  Group
 from django.core.mail import send_mail
 import os
 import json
@@ -14,7 +14,7 @@ from django.db.models import Q
 from django.db.models import Count
 from django.contrib.auth import logout as auth_logout
 from .models import brandContact
-
+from advoclik.models import MyUser
 
 
 # ----------------------- #

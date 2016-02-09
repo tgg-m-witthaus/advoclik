@@ -1,6 +1,6 @@
 from django.contrib import admin
-from.models import User, ReferralLink, ReferralClick, Campaign, Vendor
-
+from.models import ReferralLink, ReferralClick, Campaign, Vendor
+from advoclik.models import MyUser
 # Register your models here.
 
 admin.site.register(ReferralLink)

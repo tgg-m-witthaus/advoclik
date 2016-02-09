@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from django.contrib.auth.models import User
+from advoclik.models import MyUser
 from datetime import datetime, timedelta
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils import timezone
@@ -40,7 +40,7 @@ class Campaign(models.Model):
 
 @python_2_unicode_compatible
 class ReferralLink(models.Model):
-    user_id = models.ForeignKey(User)
+    user_id = models.ForeignKey(MyUser)
     campaign_id = models.ForeignKey('Campaign')
     referral_url = models.CharField(max_length=50)
     redirect_url = models.URLField(max_length=200)
@@ -60,30 +60,3 @@ class ReferralClick(models.Model):
 
     def __str__(self):
         return self.link + self.pub_date
-
-
-
-def init_data():
-    user = User.objects.create_user(username="p_kravik", email="pkravik@gmail.com", password="freak123")
-
-    print "maybe"
-
-    tgg_vendor = Vendor(name="TGG", contact_email="tgg@tgggroup.com", contact_phone="3126216060")
-    tgg_vendor.save()
-
-    campaign = Campaign(vendor_id=tgg_vendor,
-                        campaign_name="Testing",
-                        start_date=datetime.strptime("2016-02-01 01:00:00", "%Y-%m-%d %H:%M:%S"),
-                        end_date=datetime.strptime("2016-02-08 01:00:00", "%Y-%m-%d %H:%M:%S"),
-                        active=True,
-                        target_clicks=1000)
-
-    campaign.save()
-
-    link = ReferralLink(user_id=user,
-                        campaign_id=campaign,
-                        referral_url="refer/test",
-                        referral_suffix="test",
-                        redirect_url="http://www.tgggroup.com/")
-
-    link.save()

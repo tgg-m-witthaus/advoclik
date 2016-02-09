@@ -7,6 +7,11 @@ from datetime import datetime, timedelta
 from django.utils.encoding import python_2_unicode_compatible
 from django.utils import timezone
 from django.contrib.staticfiles.templatetags.staticfiles import static
+from django import forms
+from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin
+from advoclik.models import MyUser
+
 
 @python_2_unicode_compatible
 class brandContact(models.Model):
