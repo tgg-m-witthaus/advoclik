@@ -82,8 +82,14 @@ def register(request):
     return render(request, 'landing/register.html', context_instance=context)
 
 def register_user(request):
-    context = RequestContext(request,
-                             {'request': request,
-                              'user': request.user})
+    POST = request.POST
+    first_name = POST['first_name']
+    last_name = POST['last_name']
+    password = POST['password1']
+    email = POST['email']
+    user = MyUser.objects.get_or_create(first_name=first_name,
+                                        last_name=last_name,
+                                        email=email,
+                                        password=password)
 
-    return render(request, 'landing/register.html', context_instance=context)
+    return HttpResponseRedirect('/home')
