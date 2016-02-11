@@ -1,4 +1,29 @@
-{% extends 'base_home.html' %}  
+{% extends 'base_home.html' %}
+{% load staticfiles %}
+
+{% block post_body %}
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: "518130741701742",
+            xfbml: true,
+            version: 'v2.5'
+        });
+    };
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+{% endblock %}
+
 {%  block content %}
 
                
@@ -35,66 +60,30 @@
         <div class="blog container">
             <div class="row">
                 <div id="blog-mansonry" class="blog-list">
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="../static/overall/images/blog/post-1-thumb.jpg" alt="" /></a>                                
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Campaign 1</a></h3>
-                                <div class="post-entry">
-                                    <p>This is a placeholder</p>
-                                    <a class="read-more" href="blog-single.html">Learn more<i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">$2</li>                              	
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
-                            </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                    
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="../static/overall/images/blog/post-1-thumb.jpg" alt="" /></a>                                
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Campaign 2</a></h3>
-                                <div class="post-entry">
-                                    <p>This is a placeholder</p>
-                                    <a class="read-more" href="blog-single.html">Learn more<i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">$3</li>                              	
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
-                            </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                    
-                    <article class="post col-md-4 col-sm-6 col-xs-12">
-                        <div class="post-inner">
-                            <figure class="post-thumb">
-                                <a href="blog-single.html"><img class="img-responsive" src="../static/overall/images/blog/post-1-thumb.jpg" alt="" /></a>                                
-                            </figure><!--//post-thumb-->
-                            <div class="content">
-                                <h3 class="post-title"><a href="blog-single.html">Campaign 3</a></h3>
-                                <div class="post-entry">
-                                    <p>This is a placeholder</p>
-                                    <a class="read-more" href="blog-single.html">Learn more<i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                                <div class="meta">
-                                    <ul class="meta-list list-inline">                                       
-                                    	<li class="post-time post_date date updated">$7</li>                              	
-                                	</ul><!--//meta-list-->                           	
-                                </div><!--meta-->
-                            </div><!--//content-->
-                        </div><!--//post-inner-->
-                    </article><!--//post-->
-                </div><!--//blog-list-->  
+                    {% for campaign in campaigns %}
+                        <article class="post col-md-4 col-sm-6 col-xs-12">
+                            <div class="post-inner">
+                                <figure class="post-thumb">
+                                    <a href="#"><img class="img-responsive" src="{% static 'overall/images/blog/post-1-thumb.jpg' %}" alt="" /></a>
+                                </figure><!--//post-thumb-->
+                                <div class="content">
+                                    <h3 class="post-title"><a href=#">{{ campaign.title }}</a></h3>
+                                    <div class="post-entry">
+                                        <p>{{ campaign.description }}</p>
+                                        <div class="fb-share-button" data-href="{{ campaign.url }}" data-layout="button"></div>
+                                        <a href="{% url 'social:begin' 'facebook' %}?next={{ request.path }}">Login with Facebook</a>
+                                        <a class="read-more" href="#">Learn more<i class="fa fa-long-arrow-right"></i></a>
+                                    </div>
+                                    <div class="meta">
+                                        <ul class="meta-list list-inline">
+                                            <li class="post-time post_date date updated">$2</li>
+                                        </ul><!--//meta-list-->
+                                    </div><!--meta-->
+                                </div><!--//content-->
+                            </div><!--//post-inner-->
+                        </article><!--//post-->
+                    {% endfor %}
+                </div><!--//blog-list-->
             </div><!--//row-->
             <div class="pagination-container text-center">
                 <ul class="pagination">

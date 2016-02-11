@@ -29,17 +29,17 @@ def make_two_users_friends(user1, user2):
     r2 = requests.post(second_invite_url, params={'access_token': user2_token})
 
     if r1.status_code != 200:
-        print "r1: got status code %d" % (r.status_code)
+        print "r1: got status code %d" % (r1.status_code)
 
     if r2.status_code != 200:
-        print "r2: got status code %d" % (r.status_code)
+        print "r2: got status code %d" % (r2.status_code)
 
 
 
 def create_test_users(app_access_token, user_name_array):
     url = "https://graph.facebook.com/v2.5/" + APP_ID + "/accounts/test-users"
 
-    user_options = {'installed': True,
+    user_options = {'installed': False,
                     'permissions': ['email', 'user_friends', 'public_profile']}
 
     user_options['access_token'] = app_access_token
@@ -47,7 +47,17 @@ def create_test_users(app_access_token, user_name_array):
     for name in user_name_array:
         user_options['name'] = name
         r = requests.post(url, params=user_options)
+        new_user = r.json()
+        set_password(new_user, app_access_token)
         time.sleep(1)
+
+def set_password(user, app_access_token):
+    url = "https://graph.facebook.com/v2.5/" + user['id']
+    pass_params = {'access_token': app_access_token,
+                   'password': 'freak123'}
+    r = requests.post(url, params=pass_params)
+    if r.status_code != 200:
+        print "password setting code of %d" % (r.status_code)
 
 
 def get_test_users(app_access_token):
@@ -65,12 +75,12 @@ def delete_all_test_users(app_access_token):
     if len(test_users) > 0:
         print "deleting %d test users" % (len(test_users))
         for user in test_users:
-            delete_test_user(user['id'], user['access_token'])
+            delete_test_user(user['id'], app_access_token)
             time.sleep(1)
 
 
-def delete_test_user(user_id, user_token):
-    r = requests.delete("https://graph.facebook.com/v2.5/" + str(user_id), params={'access_token': user_token})
+def delete_test_user(user_id, app_token):
+    r = requests.delete("https://graph.facebook.com/v2.5/" + str(user_id), params={'access_token': app_token})
     if r.status_code != 200:
         print "got status code %d" % (r.status_code)
 
@@ -85,8 +95,8 @@ if __name__ == '__main__':
 
     test_user_list = get_test_users(app_access_token)
 
-    for user1, user2 in itertools.combinations(test_user_list, 2):
-        make_two_users_friends(user1, user2)
+    # for user1, user2 in itertools.combinations(test_user_list, 2):
+    #     make_two_users_friends(user1, user2)
 
 
 
