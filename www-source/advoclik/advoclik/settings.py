@@ -100,10 +100,9 @@ LOGIN_REDIRECT_URL = '/'
 SOCIAL_AUTH_FACEBOOK_KEY = "518130741701742"
 SOCIAL_AUTH_FACEBOOK_SECRET = "5cb06206d0c08cb3f0809d533f4a7a5e"
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['public_profile', 'email', 'user_friends']
-SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
-  'locale': 'en_EN',
-  'fields': ['id', 'name', 'email', 'age_range', 'birthday']
-}
+SOCIAL_AUTH_FACEBOOK_EXTRA_DATA = ['name', 'first_name', 'last_name', 'age_range', 'email', 'gender']
+SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {'fields': 'name,first_name,last_name,age_range,email,gender'}
+
 
 SOCIAL_AUTH_PIPELINE = (
     # Get the information we can about the user and return it in a simple
