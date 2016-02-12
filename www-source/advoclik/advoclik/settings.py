@@ -147,6 +147,8 @@ SOCIAL_AUTH_PIPELINE = (
 
     # Update the user record with any changed info from the auth service.
     'social.pipeline.user.user_details',
+
+    'thirdauth.pipeline.get_friend_count',
 )
 
 WSGI_APPLICATION = 'advoclik.wsgi.application'
