@@ -20,9 +20,20 @@ from .models import ReferralLink, ReferralClick, init_data, Campaign
 @login_required
 def index(request):
     # Note: Images are handled really shittily
-    campaigns = Campaign.objects.all()
+    # campaigns = Campaign.objects.all()
     links = ReferralLink.objects.all()
-    context = {'links': links, 'campaigns': campaigns}
+
+    campaign_list = [{'title': 'Campaign 1',
+                      'description': 'A small campaign',
+                      'url': 'http://162.243.22.35/refer/test'},
+                     {'title': 'Campaign II',
+                      'description': 'Revenge of the click',
+                      'url': 'http://162.243.22.35/refer/test'},
+                     {'title': 'Campaign III',
+                      'description': 'Return of the Monies',
+                      'url': 'http://162.243.22.35/refer/test'}]
+
+    context = {'links': links, 'campaigns': campaign_list, 'request': request}
     return render(request, 'home/home.html', context)
 
 @login_required
