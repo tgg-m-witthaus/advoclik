@@ -57,6 +57,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+AUTH_USER_MODEL = 'advoclik.MyUser'
 
 ROOT_URLCONF = 'advoclik.urls'
 

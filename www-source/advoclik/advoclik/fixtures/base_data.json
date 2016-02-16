@@ -21,32 +21,26 @@
 		}
 	},
   {
-  "model": "auth.user",
+  "model": "advoclik.MyUser",
   "pk": 1,
   "fields": {
-    "username": "c_cook",
     "email": "cook@tgggroup.com",
     "last_name": "Cook",
     "first_name": "Cody",
     "is_active": true,
-    "is_superuser": true,
-    "is_staff": true,
-    "groups": [3],
+    "is_admin": true,
     "password": "pbkdf2_sha256$15000$PaVAtfLbrMUn$Tu9A061Lx1OPxC93Mmw6PIpsY9cU67qqmN8y+X1YGsA="
   }
 },
   {
-  "model": "auth.user",
+  "model": "advoclik.MyUser",
   "pk": 2,
   "fields": {
-    "username": "p_kravik",
     "email": "Kravik@tgggroup.com",
     "last_name": "Kravik",
     "first_name": "Paul",
     "is_active": true,
-    "is_superuser": true,
-    "is_staff": true,
-    "groups": [3],
+    "is_admin": true,
     "password": "pbkdf2_sha256$15000$PaVAtfLbrMUn$Tu9A061Lx1OPxC93Mmw6PIpsY9cU67qqmN8y+X1YGsA="
   }
 },

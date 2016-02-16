@@ -144,6 +144,9 @@ reset_db () {
     fi
   done
 
+
+  python manage.py makemigrations advoclik
+  python manage.py migrate advoclik
   python manage.py makemigrations home
   python manage.py migrate home
   python manage.py makemigrations landing
