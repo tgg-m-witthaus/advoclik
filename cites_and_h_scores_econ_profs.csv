@@ -1,0 +1,268 @@
+last,first,current,grad,undergrad,year,h_score,citations
+Alesina,Alberto,Harvard,Bocconi,Harvard,1986,NA,NA
+Antras,Pol,Harvard,Pompeu Fabra,MIT,2003,24,7111
+Barro,Robert,Harvard,CalTech,Harvard,1970,110,125256
+Chamberlain,Gary,Harvard,Harvard,Harvard,1975,NA,NA
+Chaney,Eric,Harvard,Stanford,Berkeley,2008,NA,NA
+Chodorow-Reich,Gabriel,Harvard,Harvard,Berkeley,2013,7,469
+Cooper,Richard,Harvard,Oberlin,Harvard,1962,106,55200
+Cutler,David,Harvard,Harvard,MIT,1991,36,19343
+Dell,Melissa,Harvard,Harvard,MIT,2012,11,1511
+Farhi,Emmanuel,Harvard,Ecole ,MIT,2006,29,4929
+Campbell,John,Harvard,Oxford,Yale,1979,84,69886
+Feldstein,Martin,Harvard,Oxford,Harvard,1961,NA,NA
+Freeman,Richard,Harvard,Dartmouth,Harvard,1964,10,392
+Friedman,Benjamin,Harvard,Harvard,Harvard,1971,40,6092
+Fryer,Roland,Harvard,University of Texas,Penn State,2002,32,5724
+Fudenberg,Drew,Harvard,Harvard,MIT,1981,70,29282
+Glaeser,Edward,Harvard,Princeton,UChicago,1992,102,71085
+Goldin,Claudia,Harvard,Cornell,UChicago,1972,NA,NA
+Golub,Benjamin,Harvard,CalTech,Stanford,2012,9,1082
+Gopinath,Gita,Harvard,University of Delhi,Princeton,2001,18,3267
+Hart,Oliver,Harvard,Cambridge,Princeton,1974,NA,NA
+Helmpan ,Elhanan,Harvard,Tel Aviv,Harvard,1974,NA,NA
+Hendren,Nathaniel,Harvard,UChicago,MIT,2012,8,710
+Jorgenson,Dale,Harvard,Reed,Harvard,1959,NA,NA
+Kasy,Maximilian,Harvard,University of Vienna,Berkeley,2008,4,76
+Katz,Lawrence,Harvard,Berkeley,MIT,1981,83,47518
+Kremer,Michael,Harvard,Harvard,Harvard,1992,23,1793
+Laibson,David,Harvard,Harvard,MIT,1994,59,25349
+Lee ,Robin,Harvard,Harvard,Harvard,2008,11,607
+Maggioro,Matteo,Harvard,Luiss Guido Carli,Berkeley,2012,6,266
+Mankiw,Greg,Harvard,Princeton,MIT,1984,81,55572
+Marglin,Stephen,Harvard,Harvard,Harvard,1965,NA,NA
+Maskin,Eric,Harvard,Harvard,Harvard,1972,70,28388
+Melitz,Marc,Harvard,Haverford,Michigan,1989,25,25902
+Miron,Jeffrey,Harvard,Swarthmore,MIT,1979,NA,NA
+Mullainathan,Sendhil,Harvard,Cornell,Harvard,1998,53,23356
+Nunn,Nathaniel,Harvard,Simon Fraser University,University of Toronto,2005,23,4808
+Pakes,Ariel,Harvard,Hebrew University,Harvard,1979,45,25506
+Pallais,Amanda,Harvard,University of Virginia,MIT,2011,NA,NA
+Rabin,Matthew,Harvard,University of Wisconsin--Madison,MIT,1989,NA,NA
+Rogoff,Kenneth,Harvard,Yale,MIT,1980,87,73226
+Sen,Amartya,Harvard,Cambridge,Cambridge,1959,176,239668
+Shephard,Neil,Harvard,York University,LSE,1986,58,25483
+Schleifer,Andrei,Harvard,Harvard,MIT,1986,131,212636
+Statcheva,Stefanie,Harvard,Cambridge,MIT,2014,NA,NA
+Stein,Jeremy,Harvard,Princeton,MIT,1986,69,50601
+Stock,James,Harvard,Yale,Berkeley,1983,30,7216
+Strzalecki,Tomasz,Harvard,University of Namur,Northwestern,2008,11,504
+Summers,Lawrence,Harvard,MIT,Harvard,1982,147,105632
+Tamer,Elie,Harvard,University of Texas,Northwestern,1999,NA,NA
+Weitzman,Martin,Harvard,Swarthmore,MIT,1967,NA,NA
+Acemoglue,Daron,MIT,University of York,LSE,1992,104,80947
+Agarwal,Nikhil,MIT,Brandeis,Harvard,2008,6,144
+Angeletos,George,MIT,Athens University,Harvard,2001,26,5676
+Angrist,Joshua,MIT,Oberlin,Princeton,1989,NA,NA
+Atkin,David,MIT,Cambridge,Princeton,2009,8,358
+Autor,David,MIT,Tufts,Harvard,1999,43,19523
+Banerjee,Abhijit,MIT,University of Calcutta,Harvard,1981,12,435
+Caballero,Ricardo,MIT,Universidad Catolica,MIT,1988,1,3
+Chernozhukov ,Viktor,MIT,University of Illinois at Urbana,Stanford,2000,34,5922
+Costinot,Arnaud,MIT,Ecole ,Princeton,2005,19,2424
+Duflo,Esther,MIT,Ecole ,MIT,1999,68,29434
+Ellison,Glen,MIT,Harvard,MIT,1992,32,16315
+Ellison,Sara,MIT,Purdue,MIT,1993,12,1620
+Finkelstein,Amy,MIT,Harvard,MIT,2001,37,6244
+Gibbons,Robert,MIT,Harvard,Stanford,1985,44,19714
+Gruber,Jonathan,MIT,MIT,Harvard,1992,75,23465
+Hausman,Jerry,MIT,Brown,Oxford,1968,NA,NA
+Holmstrom,Bengt,MIT,University of Helsinki,Stanford,1972,NA,NA
+Manea,Mihai,MIT,Princeton,Harvard,2009,10,488
+Mikusheva,Anna,MIT,Moscow State University,Harvard,2007,NA,NA
+Newey,Whitney,MIT,Brigham Young,MIT,1983,NA,NA
+Olken,Benjamin,MIT,Yale,Harvard,2004,24,4970
+Pathak,Parag,MIT,Harvard,Harvard,2007,26,4504
+Poterba,James,MIT,Harvard,Oxford,1983,96,41893
+Prelec,Drazen,MIT,Harvard,Harvard,1983,NA,NA
+Rose,Nancy,MIT,Harvard,MIT,1985,NA,NA
+Schilbach,Frank,MIT,Mannheim University,Harvard,2015,1,9
+Simsek,Alp,MIT,MIT,MIT,2010,NA,NA
+Toikka,Juuso,MIT,University of Helsinki,Stanford,2002,6,459
+Townsend,Robert,MIT,Duke,Minnesota,1975,8,165
+Werning,Ivan,MIT,Universidad San Andres,UChicago,2002,NA,NA
+Whinston,Michael,MIT,UPenn ,MIT,1984,NA,NA
+Williams,Heidi,MIT,Dartmouth,Harvard,2003,11,615
+Wolitsky,Alexander,MIT,Harvard,MIT,2011,6,350
+Yildiz,Muhamet,MIT,Bogazici,Stanford,2000,14,804
+Abreu,Dilip,Princeton,"Elphinstone College, Bombay University",Princeton,1983,NA,NA
+Aguiar,Mark,Princeton,Brown,MIT,1999,NA,NA
+Ait-Sahalia,Yacine,Princeton,Ecole Polytechnique,MIT,1993,42,12125
+Ashenfelter,Orley,Princeton,Claremont McKenna College,Princeton,1970,NA,NA
+Benabou,Roland,Princeton,Ecole Polytechnique,MIT,1986,41,16587
+Blinder,Alan,Princeton,Princeton,MIT,1971,NA,NA
+Breunnermeir,Markus,Princeton,University of Regensburg,London School of Economics,1999,NA,NA
+Case,Anne,Princeton,SUNY at Albany,Princeton,1988,50,17822
+Chassang,Sylvain,Princeton,Ecole Normale Superieure,MIT,2007,8,464
+Currie,Janet,Princeton,University of Toronto,Princeton,1988,NA,NA
+Deaton,Angus,Princeton,Cambridge,Cambridge,1974,95,56279
+De Loecker,Janet,Princeton,K.U. Brussel,K.U. Leuven,2006,NA,NA
+Dobbie,Will,Princeton,Kalamazoo College,Harvard,2013,8,755
+Evdokimov,Kirill,Princeton,Moscow Institute of Physics and Technology,Yale,2010,NA,NA
+Farber,Henry,Princeton,Rensselaer Polytechnic Institute,Princeton,1977,NA,NA
+Farboodi,Maryam,Princeton,Sharif University of Technology,University of Chicago,2014,NA,NA
+Fujiwara,Thomas,Princeton,University of Sao Paulo,University of Britich Columbia,2011,8,277
+Golosov,Mikhail,Princeton,Belarus State Economic University,University of Minnesota,2004,NA,NA
+Grossman,Gene,Princeton,Yale,MIT,1980,75,58733
+Gul,Faruk,Princeton,Bogazici University,Princeton,1981,NA,NA
+Haddad,Valentin,Princeton,Ecole Polytechnique,University of Chicago,2012,NA,NA
+Hong,Harrison,Princeton,Berkeley,MIT,1997,33,15754
+Honore,Bo,Princeton,University of Aarhus,University of Chicago,1983,NA,NA
+Itskhoki,Oleg,Princeton,Moscow Statue University,Harvard,2009,14,2166
+Kalouptsidi,Myrto,Princeton,University of Athens,Yale,2011,2,53
+Kaplan,Greg,Princeton,Macquarie University,NYU,2009,14,1073
+Kastl,Jakub,Princeton,"Charles University, Prague",Northwestern,2006,9,354
+Kolesar,Michal,Princeton,Trinity College Dublin,Harvard,2013,3,139
+Krueger,Alan,Princeton,Cornell,Harvard,1987,94,59374
+Kuziemko,Ilyana,Princeton,Harvard,Harvard,2007,NA,NA
+Lee ,David,Princeton,Harvard,Princeton,1999,72,45807
+Mas,Alexandre,Princeton,Macalester College,Princeton,2004,11,2088
+Mian,Atif,Princeton,MIT,MIT,2001,26,6884
+Moll,Benjamin,Princeton,University College London,University of Chicago,2010,10,654
+Morales,Eduardo,Princeton,Universidad Coarlos III de Madrid,Harvard,2011,20,1558
+Morris,Stephen,Princeton,Cambridge,Yale,1991,49,14447
+Muller,Ulrich,Princeton,???,"University of Sankt Gallen, Switzerland",2002,49,9172
+Neilson,Christopher,Princeton,University of Chile,Yale,2014,11,599
+Oberfield,Ezra,Princeton,Yale,University of Chicago,2010,5,135
+Pesendorfer,Wolfgang,Princeton,,,,NA,NA
+Redding,Stephen,Princeton,Oxford,Oxford,1996,48,15548
+Reinhardt,Uwe,Princeton,University of Saskatchewan,Yale,1970,NA,NA
+Rogerson,Richard,Princeton,University of Alberta,University of Minnesota,1984,NA,NA
+Rosen,Harvey,Princeton,University of Michigan,Harvard,1974,NA,NA
+Rossi-Hansberg,Esteban,Princeton,"ITAM, Mexico",University of Chicago,2002,30,5536
+Sannikov,Yuliy,Princeton,Princeton,Stanford,2004,NA,NA
+Shapiro,Harold,Princeton,McGill,Princeton,1964,NA,NA
+Shin,Hyun-Song,Princeton,Oxford,Oxford,1987,73,22919
+Sims,Christopher,Princeton,Harvard,Harvard,1968,68,43891
+Vogl,Tom,Princeton,Princeton,Harvard,2011,27,2112
+Watson,Mark,Princeton,California State University Northridge,UC San Diego,1980,20,1578
+Willig,Robert,Princeton,Harvard,Stanford,1973,NA,NA
+Xandri,Juan,Princeton,Universidad de Montevideo,MIT,2013,NA,NA
+Xiong,Wei,Princeton,University of Science and Technology of China,Duke,2001,29,7256
+Yogo,Motohiro,Princeton,Harvard,Harvard,2004,20,9180
+Abramitzky,Ran,Stanford,Hebrew University,Northwestern,2005,NA,NA
+Auclert,Adrien,Stanford,Ecole ,MIT,2007,2,39
+Bagwell,Kyle,Stanford,Southern Methodist University,Stanford,1986,47,10317
+Bernheim,Douglas,Stanford,Harvard,MIT,1982,58,22902
+Bloom,Nicholas,Stanford,Cambridge,UCL,2001,41,14508
+Boskin,Michael,Stanford,Berkeley,Berkeley,1971,NA,NA
+Carroll,Gabriel,Stanford,Harvard,MIT,2012,NA,NA
+Chandrasekhar,Arun,Stanford,Columbia,MIT,2012,10,696
+Chetty,Raj,Stanford,Harvard,Harvard,2003,35,7570
+Dickstein,Michael,Stanford,Cornell,Harvard,2005,NA,NA
+Duggan,Mark,Stanford,MIT,Harvard,1999,25,3539
+Dupas,Pascaline,Stanford,Ecole ,EHESS,1999,19,3251
+Einav,Liran,Stanford,Tel Aviv,Harvard,2002,29,3548
+Gentzkow,Matthew,Stanford,Harvard,Harvard,2004,19,4081
+Goulder,Lawrence,Stanford,Harvard,Stanford,1982,NA,NA
+Greif,Avner,Stanford,Tel Aviv,Northwestern,1989,32,15125
+Hall,Robert,Stanford,Berkeley,MIT,NA,73,49546
+Hong,Han,Stanford,Zhongshan University,Stanford,1988,25,3535
+Hoxby,Caroline,Stanford,Harvard,MIT,1994,51,12114
+Jackson,Matthew,Stanford,Princeton,Stanford,1988,64,20049
+Jarosch,Gregor,Stanford,University of Tuebingen,UChicago,2015,NA,NA
+Kehoe,Patrick,Stanford,Providence College,Harvard,1986,NA,NA
+Klenoe,Pete,Stanford,Berkeley,Stanford,1991,35,14678
+Kojima,Fuhito,Stanford,University of Tokyo,Harvard,2008,19,1489
+Kurlat,Pablo,Stanford,Universidad Torcuato Di Tella,MIT,2010,NA,NA
+Larsen,Brad,Stanford,Brigham Young,MIT,2013,5,55
+Levin,Jonathan,Stanford,Stanford,MIT,1999,32,5029
+Manova,Kalina,Stanford,Harvard,Harvard,2007,11,3204
+Milgrom,Paul,Stanford,Michigan,Stanford,1979,69,71646
+Niederle,Muirel,Stanford,University of Vienna,Harvard,2002,27,4580
+Pencavel,John,Stanford,UCL,Princeton,1969,NA,NA
+Persson ,Petra,Stanford,Stockholm University,Columbia,2013,NA,NA
+Piazzesi,Monika,Stanford,Univeristy of Heidelberg,Stanford,2000,23,7232
+Pistaferri,Luigi,Stanford,IUN,IUN,2001,31,4552
+Romano,Joseph,Stanford,Princeton,Berkeley,1986,13,649
+Roth,Al,Stanford,Columbia,Stanford,1974,80,34083
+Scheur,Florian,Stanford,Univeristy of Konstanz,MIT,2010,9,280
+Schneider,Martin,Stanford,University of Bonn,Stanford,1999,24,4282
+Segal,Ilya,Stanford,Moscow Institute of Physics and Technology,Harvard,1995,25,4523
+Taylor,John,Stanford,Princeton,Stanford,1973,66,37147
+Ahn,David,Berkeley,Emory,Stanford,2004,8,445
+Akerlof,George,Berkeley,Yale,MIT,1966,8,426
+Anderson,Robert,Berkeley,University of Toronto,Yale,1977,116,54856
+Auerbach,Alan,Berkeley,Yale,Harvard,1978,71,21706
+Bardhan,Pranab,Berkeley,"Presidency College, Calcutta",Cambridge,1966,74,24068
+Break,George,Berkeley,University of Toronto,University of California,1951,NA,NA
+Brown,Clair,Berkeley,Wellesley,University of Maryland,1973,22,2185
+Card,David,Berkeley,Queen's University (Kingston),Princeton,1983,86,43339
+Craine,Roger,Berkeley,Washington College,University of Maryland,1972,NA,NA
+DeVries,Jan,Berkeley,Columbia,Yale,??,35,7938
+DellaVigna,Stefano,Berkeley,Bocconi University,Harvard,2002,21,5977
+DeLong,J.Bradford,Berkeley,Harvard,Harvard,1987,28,9575
+Edlin,Aaron,Berkeley,Princeton,Stanford,1993,NA,NA
+Eichengreen,Barry,Berkeley,"University of California, Santa Cruz",Yale,1979,NA,NA
+Ergin,Haluk,Berkeley,Bogazici University,Princeton,2003,NA,NA
+Faber,Benjamin,Berkeley,London School of Economics,London School of Economics,2013,NA,NA
+Farrell,Joseph,Berkeley,Oxford,Oxford,1981,50,21400
+Finan,Frederico,Berkeley,University of Arizon,Berkeley,2006,16,2759
+Gaubert,Cecile,Berkeley,Ecole Polytechnique,Princeton,2014,NA,NA
+Gilbert,Richard,Berkeley,Cornell,Stanford,1976,69,13574
+Gorodnichenko,Yuriy,Berkeley,"National University of Kyiv-Mohyla Academy, Kiev",University of Michigan,2007,28,3874
+Gourinchas,Pierre-Olivier,Berkeley,Ecole Polytechnique,MIT,1996,25,8059
+Graham,Bryan,Berkeley,Oxford,Harvard,2005,13,1254
+Grossman,Gregory,Berkeley,Berkeley,Harvard,1952,NA,NA
+Hall,Bronwyn,Berkeley,Wellesley,Stanford,1988,70,36817
+Handel,Ben,Berkeley,Princeton,Northwestern,2010,5,307
+Hermalin,Benjamin,Berkeley,Princeton,MIT,1988,37,14613
+Hoynes,Hilary,Berkeley,Colby College,Stanford,1992,31,5131
+Jansson,Michael,Berkeley,"University of Aarhus, Denmark","University of Aarhus, Denmark",2000,13,809
+Kariv,Shachar,Berkeley,Tel Aviv University,NYU,2003,NA,NA
+Katz,Michael,Berkeley,Harvard,Oxford,1982,22,1316
+Kawai,Kei,Berkeley,University of Tokyo,Northwestern,2011,4,96
+Keeler,Theodore,Berkeley,Reed,MIT,1971,NA,NA
+Kline,Patrick,Berkeley,Reed,University of Michigan,2007,16,1503
+Lee ,Ronald,Berkeley,Reed,Harvard,1971,62,14905
+Letiche,John,Berkeley,McGill,University of Chicago,1951,NA,NA
+Malmendier,Ulrike,Berkeley,University of Bonn,Harvard,2002,24,9384
+McFadden,Daniel,Berkeley,University of Minnesota,University of Minnesota,1962,NA,NA
+Miguel,Edward,Berkeley,MIT,Harvard,2000,43,12691
+Miller,Conrad,Berkeley,Stanford,MIT,2014,2,64
+Moretti,Enrico,Berkeley,Bocconi University,Berkeley,2000,39,11127
+Morgan,John,Berkeley,University of Pennsylvania,Pennsylvania State University,1996,40,7113
+Obstfeld,Maurice,Berkeley,University of Pennsylvania,MIT,1979,NA,NA
+Olney,Martha,Berkeley,"University of Redlands, California",Berkeley,1985,10,560
+Pouzo,Demian,Berkeley,Universidad Torcuato De Tella (Argentina),NYU,2009,NA,NA
+Powell,James,Berkeley,Berkeley,Stanford,1982,32,8724
+Reich,Michael,Berkeley,Swarthmore,Harvard,???,36,5175
+Rodriquez-Clare,Andres,Berkeley,Universidad de Costa Rica,Stanford,1993,NA,NA
+Roland,Gerard,Berkeley,Universite Libre de Bruxelles,Universite Libre de Bruxelles,1988,57,16524
+Romer,Christina,Berkeley,College of William and Mary,MIT,1985,NA,NA
+Romer,David,Berkeley,Princeton,MIT,1985,26,2198
+Rothenberg,Thomas,Berkeley,?,?,?,NA,NA
+Rothstein,Jesse,Berkeley,Harvard,Berkeley,2003,23,3752
+Rubinfeld,Daniel,Berkeley,Princeton,MIT,1972,NA,NA
+Saez,Emmanuel,Berkeley,Ecole Normale Superieure,Mit,1999,57,18918
+Schoefer,Benjamin,Berkeley,Harvard,Harvard,2015,NA,NA
+Scotchmer,Suzanne,Berkeley,University of Washington,Berkeley,1980,NA,NA
+Shannon,Chris,Berkeley,University of Kansas,Stanford,1992,NA,NA
+Shapiro,Carl,Berkeley,MIT,MIT,1981,67,53519
+Sraer,David,Berkeley,Ecole Polytechnique,Toulouse School of Economics,2007,13,1493
+Strack,Philipp,Berkeley,University of Bonn,Bonn Graduate School of Business,2013,7,138
+Train,Kenneth,Berkeley,Harvard,Berkeley,1977,48,24527
+Tyson,Laura,Berkeley,Smith College,MIT,1974,27,6639
+Varian,Hal,Berkeley,MIT,Berkeley,1973,84,60541
+Walters,Christopher,Berkeley,University of Virginia,MIT,2013,8,528
+Ward,Benjamin,Berkeley,Berkeley,Berkeley,?,43,6237
+Williamson,Oliver,Berkeley,MIT,Carnegie-Mellon University,1963,103,191511
+Woroch,Glenn,Berkeley,University of Wisconsin--Madison,Berkeley,1983,NA,NA
+Yagan,Danny,Berkeley,Harvard,Harvard,2012,5,891
+Yellen,Janet,Berkeley,Brown,Yale,1971,NA,NA
+Zucman,Gabriel,Berkeley,Ecole Normale Superieure de Cachan,Paris School of Economics,2013,8,818
+Akcigit,Ufuk,UChicago,MIT,Koc University,2009,12,805
+Alvarez,Fernando,UChicago,Minnesota,Universidad La Plata,1994,25,24474
+Bonhomme,Stephane,UChicago,University of Paris,Ecole,2005,NA,NA
+Dinerstein,Michael,UChicago,Stanford,Stanford,2015,4,95
+Greenstone,Michael,UChicago,Princeton,Swarthmore,1998,NA,NA
+Hansen,Lars,UChicago,Minnesota,Utah State,1978,63,34897
+Heckman,James,UChicago,Princeton,Colorado College,1971,145,125619
+Hickman,Brent,UChicago,University of Iowa,Brigham Young,2010,NA,NA
+Hortacsu,Ali,UChicago,Stanford,Stanford,2001,23,5094
+Lamadon,Thibaut,UChicago,UCL,Supelec,2014,6,92
+Levitt,Steven,UChicago,MIT,Harvard,1994,62,40737
+List,John,UChicago,University of Wyoming,University of Wisconsin,1996,73,23907
+Lopes de Melo,Rafael,UChicago,Yale,Pontifican Universidade Catolica Rio ,2006,NA,NA
+Murphy,Kevin,UChicago,UChicago,UChicago,1986,49,34145
+Myerson,Roger,UChicago,Harvard,Harvard,1976,NA,NA
